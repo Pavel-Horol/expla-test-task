@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply h-full;
+  }
+
+  body {
+    @apply h-full font-sans text-gray-900;
+  }
+
+  * {
+    @apply box-border;
+  }
+}
+
+@layer components {
+  .chat-message-user {
+    @apply inline-flex px-4 py-2 bg-indigo-600 text-white rounded-3xl rounded-br-none text-sm;
+  }
+
+  .chat-message-other {
+    @apply inline-flex px-4 py-2 bg-gray-100 text-gray-900 rounded-3xl rounded-tl-none text-sm;
+  }
+}

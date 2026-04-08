@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "importHelpers": true,
+    "isolatedModules": true,
+    "lib": ["es2022"],
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "paths": {
+      "@chat-app/common": ["libs/common/src/index.ts"],
+      "@chat-app/common/*": ["libs/common/src/*"],
+      "@chat-app/config": ["libs/config/src/index.ts"],
+      "@chat-app/config/*": ["libs/config/src/*"],
+      "@chat-app/database": ["libs/database/src/index.ts"],
+      "@chat-app/database/*": ["libs/database/*/src/index.ts"],
+      "@chat-app/shared/*": ["libs/shared/*/src/index.ts"],
+      "@chat-app/shared/api-types": ["libs/shared/api-types/src/index.ts"],
+      "@chat-app/shared/api-types/*": ["libs/shared/api-types/src/*"],
+      "@chat-app/shared/dto": ["libs/shared/dto/src/index.ts"],
+      "@chat-app/shared/dto/*": ["libs/shared/dto/src/*"],
+      "@chat-app/shared/entities": ["libs/shared/entities/src/index.ts"],
+      "@chat-app/shared/entities/*": ["libs/shared/entities/src/*"],
+      "@chat-app/shared/events": ["libs/shared/events/src/index.ts"],
+      "@chat-app/shared/events/*": ["libs/shared/events/src/*"],
+      "@chat-app/shared/interfaces": ["libs/shared/interfaces/src/index.ts"],
+      "@chat-app/shared/interfaces/*": ["libs/shared/interfaces/src/*"],
+      "@chat-app/shared/types": ["libs/shared/types/src/index.ts"],
+      "@chat-app/shared/types/*": ["libs/shared/types/src/*"]
+    },
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2022"
+  }
+}

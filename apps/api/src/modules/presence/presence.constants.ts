@@ -1,0 +1,1 @@
+export const PRESENCE_STORE = 'PRESENCE_STORE';
