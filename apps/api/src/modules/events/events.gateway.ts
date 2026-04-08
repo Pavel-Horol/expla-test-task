@@ -27,7 +27,7 @@ import { CHAT_EVENTS, MessageSentEvent, ROOM_EVENTS, RoomCreatedEvent, RoomUserA
 
 @WebSocketGateway({
   cors: {
-    origin: 'http://localhost:4200',
+    origin: process.env.WS_CORS_ORIGIN,
     credentials: true,
   },
   namespace: '/events',
