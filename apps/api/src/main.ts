@@ -4,11 +4,14 @@ import { Logger } from 'nestjs-pino';
 import { AppModule } from './app.module';
 import { configureApp } from './bootstrap/configure-app';
 import { setupSwagger } from './bootstrap/setup-swagger';
+import { MsgpackIoAdapter } from './bootstrap/msgpack-io.adapter';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     bufferLogs: true,
   });
+
+  app.useWebSocketAdapter(new MsgpackIoAdapter(app));
 
   const config = app.get(ConfigService);
 
