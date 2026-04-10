@@ -3,7 +3,6 @@ import { io, Socket } from 'socket.io-client';
 import { WS_BASE_URL } from '../core/api-tokens';
 import { AuthService } from './auth.service';
 import type { ClientToServerEvents, ServerToClientEvents } from '@chat-app/shared/types';
-import { msgpackParser } from '@chat-app/shared/types';
 
 type NewMessagePayload = Parameters<ServerToClientEvents['newMessage']>[0];
 type UserPresencePayload = Parameters<ServerToClientEvents['userJoined']>[0];
@@ -30,7 +29,6 @@ export class RealtimeService {
       auth: {
         token: this.auth.getAccessToken(),
       },
-      parser: msgpackParser,
     });
 
     this.socket.on('connect', () => this.connected.set(true));
